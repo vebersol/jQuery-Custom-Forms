@@ -133,7 +133,9 @@
 				},
 				change: function() {
 					fakeElement.addClass(_this.setClass('focused'));
-					if (!_this.isRadio(element)) {
+					if (_this.isRadio(element)) {
+						toggleFormElement();
+					} else {
 						fakeElement.toggleClass('checked');
 					}
 				}
