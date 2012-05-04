@@ -1,0 +1,111 @@
+<!doctype HTML>
+<html>
+	<head>
+		<title>jcustomforms</title>
+		<meta charset="utf-8">
+		
+		<link rel="stylesheet" href="css/style.css" type="text/css">
+		<style type="text/css" media="screen">
+			body {font:normal 14px Helvetica, Arial, sans-serif;}
+			h1 {text-align:center;}
+			#wrapper {width:600px; margin:0 auto; padding-top:40px;}
+		</style>
+	</head>
+	<body>
+		<h1>jCustomForms - jQuery Custom Form Elements Plugin</h1>
+		
+		<div id="wrapper">
+			<form method="get" action="">
+				<fieldset>
+					<legend>Custom form</legend>
+				
+					<p>
+						<label for="select">Select your option</label>
+						<select name="data[select]" class="cform">
+							<option value=""></option>
+							<option value="1">Option 1</option>
+							<option value="2">Option 2</option>
+							<option value="3">Option 3</option>
+							<option value="4">Option 4</option>
+							<option value="5">Option 5</option>
+							<option value="6">Option 6</option>
+							<option value="7">Option 7</option>
+							<option value="8">Option 8</option>
+							<option value="9">Option 9</option>
+							<option value="10">Option 10</option>
+						</select>
+					</p>
+					<p>
+						<input type="radio" name="data[radio]" value="option1" id="option1" class="cform">
+						<label for="option1" class="lblr">Radio option 1</label>
+					</p>
+					<p>
+						<input type="radio" name="data[radio]" value="option2" id="option2" class="cform">
+						<label for="option2" class="lblr">Radio option 2</label>
+					</p>
+					<p>
+						<input type="checkbox" name="data[check]" value="female" id="optiona" class="cform">
+						<label for="optiona" class="lblr">A</label>
+					</p>
+					<p>
+						<input type="checkbox" name="data[check]" value="male" id="optionb" class="cform">
+						<label for="optionb" class="lblr">B</label>
+					</p>
+				</fieldset>
+				
+				<fieldset class="normal-form">
+					<legend>Normal form</legend>
+				
+					<p>
+						<label for="select">Select your option</label>
+						<select name="data[selectn]">
+							<option value=""></option>
+							<option value="1">Option 1</option>
+							<option value="2">Option 2</option>
+							<option value="3">Option 3</option>
+							<option value="4">Option 4</option>
+							<option value="5">Option 5</option>
+							<option value="6">Option 6</option>
+							<option value="7">Option 7</option>
+							<option value="8">Option 8</option>
+							<option value="9">Option 9</option>
+							<option value="10">Option 10</option>
+						</select>
+					</p>
+					<p>
+						<input type="radio" name="data[radion]" value="option1n" id="option1n">
+						<label for="option1n">Radio option 1</label>
+					</p>
+					<p>
+						<input type="radio" name="data[radion]" value="option2n" id="option2n">
+						<label for="option2n">Radio option 2</label>
+					</p>
+					<p>
+						<input type="checkbox" name="data[checkn]" value="female" id="optionan">
+						<label for="optionan">A</label>
+					</p>
+					<p>
+						<input type="checkbox" name="data[checkn]" value="male" id="optionbn">
+						<label for="optionbn">B</label>
+					</p>
+				</fieldset>
+			</form>
+			
+			<footer>
+				<p>Developed by: <a href="http://vebersol.net" title="Vinícius Ebersol" target="_blank">Vinícius Ebersol</a></p>
+				<p>Design by: <a href="http://www.freebiesgallery.com" title="Freebies Gallery" target="_blank">Freebies Gallery</a></p>
+			</footer>
+		</div>
+		
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script type="text/javascript" src="jquery.custom.forms-0.5.js"></script>
+		<script type="text/javascript" src="http://localhost/FRONTEND/js/console-crossbrowser/console-crossbrowser.js"></script>
+		
+		
+		<script type="text/javascript">
+			$(function() {
+				$('form').customForm();
+			});
+		</script>
+	</body>
+</html>
