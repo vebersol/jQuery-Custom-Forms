@@ -1,5 +1,5 @@
 label {
-	display:block;
+	display:inline;
 	margin-bottom:10px;
 }
 
@@ -38,11 +38,11 @@ label.lblr {
 	background-position:-10px -9px;
 }
 
-.custom-form-checkbox.checked {
+.custom-form-checkbox.custom-form-checked {
 	background-position:-51px -39px;
 }
 
-.custom-form-checkbox.checked.custom-form-focused {
+.custom-form-checkbox.custom-form-checked.custom-form-focused {
 	background-position:-10px -39px;
 }
 
@@ -59,10 +59,10 @@ label.lblr {
 	background-position:-92px -9px;
 }
 
-.custom-form-radio.checked {
+.custom-form-radio.custom-form-checked {
 	background-position:-133px -39px;
 }
 
-.custom-form-radio.checked.custom-form-focused {
+.custom-form-radio.custom-form-checked.custom-form-focused {
 	background-position:-92px -39px;
 }

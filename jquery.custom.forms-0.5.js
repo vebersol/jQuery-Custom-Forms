@@ -108,7 +108,7 @@
 			};
 			
 			if (element.attr('checked')) {
-				fakeElement.addClass('checked');
+				fakeElement.addClass(this.setClass('checked'));
 			}
 			
 			element.on({
@@ -136,7 +136,7 @@
 					if (_this.isRadio(element)) {
 						toggleFormElement();
 					} else {
-						fakeElement.toggleClass('checked');
+						fakeElement.toggleClass(_this.setClass('checked'));
 					}
 				}
 			});
@@ -155,20 +155,20 @@
 		
 		toggleRadio: function(element, fakeElement, className) {
 			$('input.' + className).attr('checked', false);
-			$('span.' + className).removeClass('checked').removeClass(this.setClass('focused'));				
+			$('span.' + className).removeClass(this.setClass('checked')).removeClass(this.setClass('focused'));				
 			
-			fakeElement.addClass('checked').addClass(this.setClass('focused'));
+			fakeElement.addClass(this.setClass('checked')).addClass(this.setClass('focused'));
 			fakeElement.next('input.' + className).attr('checked', true);
 		},
 		
 		toggleCheckbox: function(element, fakeElement, className) {
 			if (element.attr('checked')) {
 				fakeElement.next('input.' + className).attr('checked', false);
-				fakeElement.removeClass('checked');
+				fakeElement.removeClass(this.setClass('checked'));
 			}
 			else {
 				fakeElement.next('input.' + className).attr('checked', true);
-				fakeElement.addClass('checked');
+				fakeElement.addClass(this.setClass('checked'));
 			}
 		},
 		
