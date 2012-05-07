@@ -28,7 +28,24 @@ A plugin to generate accessible custom forms: select, radio, checkbox.
 </script>
 ```
 
-# Options
+# API
+
+### $.customForm(options)
+
+Use this method to build the custom forms.
+
+### Options
+
+Options should be an object like:
+
+```javascript
+var options = {
+	prefix: 'my-own-prefix',
+	keyClass: 'my-own-key-class'
+};
+
+$.customForm(options);
+```
 
 * **prefix:** (String)  
 A prefix to add to all class names used on elements created by this plugin.  

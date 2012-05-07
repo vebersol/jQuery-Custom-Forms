@@ -66,3 +66,8 @@ label.lblr {
 .custom-form-radio.custom-form-checked.custom-form-focused {
 	background-position:-92px -39px;
 }
+
+/* fix select height bug on webkit browsers for Mac OS */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	select.cform {-webkit-appearance: menulist-button;}
+}

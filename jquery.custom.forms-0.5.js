@@ -173,7 +173,7 @@
 		},
 		
 		createFakeElement: function(element, type) {
-			var value = (type == 'select') ? element.val() : '';
+			var value = (type == 'select') ? $(element).children('option[value="'+element.get(0).value+'"]').html() : '';
 			return $('<span class="'+ this.setClass(type) +'">'+ value +'</span>');
 		},
 		
