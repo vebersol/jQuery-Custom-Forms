@@ -1,3 +1,15 @@
+/*
+
+	jQuery Custom Forms Plugin
+	Version: 0.5
+	Site: http://vebersol.net/demos/jquery-custom-forms/
+	
+	Author: Vinícius Ebersol
+	
+	License: MIT License/GPL License
+	
+*/
+
 (function($){
 
 	var CustomForm = function(element, options) {
