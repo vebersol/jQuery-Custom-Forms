@@ -59,5 +59,5 @@ The class used to allow element to be replaced by a custom form element.
 
 # License
 
-MIT License - http://www.opensource.org/licenses/MIT
+MIT License - http://www.opensource.org/licenses/MIT  
 GPL License - http://www.gnu.org/licenses/gpl.html
