@@ -2,6 +2,8 @@
 
 A plugin to generate accessible custom forms: select, radio, checkbox.
 
+Demo: http://vebersol.net/demos/jquery-custom-forms/
+
 # Usage
 
 ```html
