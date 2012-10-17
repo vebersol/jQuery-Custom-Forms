@@ -186,7 +186,15 @@
 		
 		createFakeElement: function(element, type) {
 			var value = (type == 'select') ? $(element).children('option[value="'+element.get(0).value+'"]').html() : '';
-			return $('<span class="'+ this.setClass(type) +'">'+ value +'</span>');
+			var disabled = element.attr('disabled') !== undefined
+			
+			var fakeElement = $('<span class="'+ this.setClass(type) +'">'+ value +'</span>');
+
+			if (element.attr('disabled') !== undefined) {
+				fakeElement.addClass(this.setClass('disabled'));
+			}
+
+			return fakeElement;
 		},
 		
 		isRadio: function(element) {
