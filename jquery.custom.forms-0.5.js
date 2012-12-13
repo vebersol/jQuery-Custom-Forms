@@ -46,7 +46,8 @@
 			});
 			
 			$(document).bind('changeSelectValue', function(ev, element, fakeSelect) {
-				var optionName = $(element).children('option[value="'+element.get(0).value+'"]').html();
+				//var optionName = $(element).children('option[value="'+element.get(0).value+'"]').html();
+				var optionName = $(element).find('option:selected').html();
 				fakeSelect.html(optionName);
 			});
 		},
@@ -185,7 +186,8 @@
 		},
 		
 		createFakeElement: function(element, type) {
-			var value = (type == 'select') ? $(element).children('option[value="'+element.get(0).value+'"]').html() : '';
+			//var value = (type == 'select') ? $(element).children('option[value="'+element.get(0).value+'"]').html() : '';
+			var value = (type == 'select') ? $(element).find('option:selected').html() : '';
 			var disabled = element.attr('disabled') !== undefined
 			
 			var fakeElement = $('<span class="'+ this.setClass(type) +'">'+ value +'</span>');
