@@ -1,9 +1,9 @@
 {
-	"name": "jQuery Custom Forms",
+	"name": "Custom Forms",
 	"title": "A plugin to generate accessible custom forms: select, radio, checkbox.",
 	"description": "A plugin to generate accessible custom forms: select, radio, checkbox.",
 	"keywords": ["jquery", "custom", "forms", "accessible"],
-	"version": "0.5.1",
+	"version": "0.5.2",
 	"author": {
 		"name": "Vinícius Ebersol",
 		"url": "http://en.vebersol.net"
