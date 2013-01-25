@@ -1,9 +1,9 @@
 {
 	"name": "jQuery Custom Forms",
-	"title": "jQPlayer - HTML 5 Video Player Plugin for jQuery",
+	"title": "A plugin to generate accessible custom forms: select, radio, checkbox.",
 	"description": "A plugin to generate accessible custom forms: select, radio, checkbox.",
 	"keywords": ["jquery", "custom", "forms", "accessible"],
-	"version": "0.5",
+	"version": "0.5.1",
 	"author": {
 		"name": "Vinícius Ebersol",
 		"url": "http://en.vebersol.net"
