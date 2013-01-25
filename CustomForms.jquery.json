@@ -1,5 +1,5 @@
 {
-	"name": "jQueryCustomForms",
+	"name": "CustomForms",
 	"title": "A plugin to generate accessible custom forms: select, radio, checkbox.",
 	"description": "A plugin to generate accessible custom forms: select, radio, checkbox.",
 	"keywords": ["jquery", "custom", "forms", "accessible"],
