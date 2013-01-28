@@ -1,4 +1,4 @@
-/*
+/**!
 
 	jQuery Custom Forms Plugin
 	Version: 0.5
