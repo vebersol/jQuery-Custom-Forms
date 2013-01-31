@@ -9,7 +9,7 @@ Demo: http://vebersol.net/demos/jquery-custom-forms/
 ```html
 <!-- Add jQuery and the plugin file in your HTML page -->
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script type="text/javascript" src="jquery.custom.forms-0.5.js"></script>
+<script type="text/javascript" src="jquery.custom.forms.js"></script>
 
 <!-- Add the class "cform" to all elements that you want to use as custom form -->
 <select name="data[select]" class="cform">
