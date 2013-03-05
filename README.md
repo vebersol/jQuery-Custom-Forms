@@ -43,7 +43,8 @@ Options should be an object like:
 ```javascript
 var options = {
 	prefix: 'my-own-prefix',
-	keyClass: 'my-own-key-class'
+	keyClass: 'my-own-key-class',
+	enableWrapper: false
 };
 
 $.customForm(options);
@@ -56,6 +57,10 @@ A prefix to add to all class names used on elements created by this plugin.
 * **keyClass:** (String)  
 The class used to allow element to be replaced by a custom form element.  
 *Default value: 'cform'*
+
+* **enableWrapper:** (String)  
+A boolean to enable a wrapper around the custom element and the original element. Very usefull to change position of the element.  
+*Default value: false*
 
 # License
 

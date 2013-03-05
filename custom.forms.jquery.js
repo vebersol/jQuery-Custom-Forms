@@ -1,7 +1,7 @@
 /**!
 
 	jQuery Custom Forms Plugin
-	Version: 0.5
+	Version: 0.6
 	Site: http://vebersol.net/demos/jquery-custom-forms/
 	
 	Author: Vinícius Ebersol
@@ -52,14 +52,19 @@
 		},
 		
 		create: function(element) {
-			if (element.hasClass(this.options.keyClass)) {
-				if (element.get(0).nodeName == 'INPUT') {
-					this.createCustomInput(element);
-					return;
+			var keyClass = this.options.keyClass.split(',');
+
+			for (var i = keyClass.length - 1; i >= 0; i--) {
+				if (element.hasClass($.trim(keyClass[i]))) {
+					if (element.get(0).nodeName == 'INPUT') {
+						this.createCustomInput(element);
+						return;
+					}
+					
+					this.createCustomSelect(element);
 				}
-				
-				this.createCustomSelect(element);
-			}
+			};
+
 		},
 		
 		createCustomSelect: function(element) {
@@ -70,6 +75,10 @@
 				$(document).trigger('changeSelectValue', [element, fakeSelect]);
 			};
 			
+			if (this.options.enableWrapper === true) {
+				element.wrap('<div class="' + this.setClass('wrapper') + '"></div>');
+			}
+
 			element.before(fakeSelect);
 			element.on({
 				change: function() {
@@ -89,14 +98,16 @@
 					newValue();
 				}
 			});
+
 			
+			fakeSelect.attr('id', 'label_' + element.attr('id'));
 			element.css({
 				opacity: 0,
 				position: 'relative',
 				zIndex: 10,
 				width: fakeSelect.outerWidth(),
 				height: fakeSelect.outerHeight()
-			})
+			});
 		},
 		
 		createCustomInput: function(element) {
@@ -213,7 +224,8 @@
 
 	var defaultOptions = {
 		prefix: 'custom-form-',
-		keyClass: 'cform'
+		keyClass: 'cform',
+		enableWrapper: false
 	}
 	
 	
