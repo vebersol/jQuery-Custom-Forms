@@ -1,12 +1,11 @@
 /**!
 
 	jQuery Custom Forms Plugin
-	Version: 0.6.2.1
+	Version: 0.6.3
 	Site: http://vebersol.net/demos/jquery-custom-forms/
 	
-	Author: Vinícius Ebersol
-	
-	License: MIT License
+	@author Vinícius Ebersol
+	@license MIT License
 	
 */
 
