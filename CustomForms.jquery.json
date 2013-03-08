@@ -3,7 +3,7 @@
 	"title": "jQuery Custom Forms",
 	"description": "A plugin to generate accessible custom forms: select, radio, checkbox.",
 	"keywords": ["jquery", "custom", "forms", "accessible"],
-	"version": "0.6.2",
+	"version": "0.6.2.1",
 	"author": {
 		"name": "Vinícius Ebersol",
 		"url": "http://en.vebersol.net"
