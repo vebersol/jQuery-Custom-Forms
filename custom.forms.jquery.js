@@ -1,7 +1,7 @@
 /**!
 
 	jQuery Custom Forms Plugin
-	Version: 0.6.1
+	Version: 0.6.2
 	Site: http://vebersol.net/demos/jquery-custom-forms/
 	
 	Author: Vinícius Ebersol
