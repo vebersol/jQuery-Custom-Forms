@@ -1,12 +1,12 @@
 /**!
 
 	jQuery Custom Forms Plugin
-	Version: 0.6
+	Version: 0.6.1
 	Site: http://vebersol.net/demos/jquery-custom-forms/
 	
 	Author: Vinícius Ebersol
 	
-	License: MIT License/GPL License
+	License: MIT License
 	
 */
 
@@ -18,10 +18,10 @@
 		this.formElements = this.element.find('input, select');
 		
 		this.init();
-  	};
+	};
 	
 	CustomForm.prototype = {
-		init: function(options) {
+		init: function() {
 			this.setup();
 			this.bind();
 		},
@@ -52,9 +52,10 @@
 		},
 		
 		create: function(element) {
-			var keyClass = this.options.keyClass.split(',');
+			var i,
+				keyClass = this.options.keyClass.split(',');
 
-			for (var i = keyClass.length - 1; i >= 0; i--) {
+			for (i = keyClass.length - 1; i >= 0; i--) {
 				if (element.hasClass($.trim(keyClass[i]))) {
 					if (element.get(0).nodeName == 'INPUT') {
 						this.createCustomInput(element);
@@ -63,15 +64,16 @@
 					
 					this.createCustomSelect(element);
 				}
-			};
+			}
 
 		},
 		
 		createCustomSelect: function(element) {
-			var _this = this;
-			var fakeSelect = this.createFakeElement(element, 'select');
+			var _this = this,
+				newValue,
+				fakeSelect = this.createFakeElement(element, 'select');
 			
-			var newValue = function() {
+			newValue = function() {
 				$(document).trigger('changeSelectValue', [element, fakeSelect]);
 			};
 			
@@ -111,10 +113,11 @@
 		},
 		
 		createCustomInput: function(element) {
-			var _this = this;
-			var fakeElement = this.createFakeElement(element, element.get(0).type);
-			
-			var className = this.toSlug(element.attr('name'));
+			var _this = this,
+				toggleFormElement,
+				fakeElement = this.createFakeElement(element, element.get(0).type),
+				className = this.toSlug(element.attr('name'));
+
 			fakeElement.addClass(className);
 			element.addClass(className);
 			
@@ -126,7 +129,7 @@
 				left: -99999
 			});
 			
-			var toggleFormElement = function() {
+			toggleFormElement = function() {
 				$(document).trigger('toggleFormElement', [element, fakeElement, className]);
 			};
 			
@@ -196,10 +199,8 @@
 		},
 		
 		createFakeElement: function(element, type) {
-			var value = (type == 'select') ? $(element).find('option:selected').html() : '';
-			var disabled = element.attr('disabled') !== undefined
-			
-			var fakeElement = $('<span class="'+ this.setClass(type) +'">'+ value +'</span>');
+			var value = (type == 'select') ? $(element).find('option:selected').html() : '',
+				fakeElement = $('<span class="'+ this.setClass(type) +'">'+ value +'</span>');
 
 			if (element.attr('disabled') !== undefined) {
 				fakeElement.addClass(this.setClass('disabled'));
@@ -220,13 +221,13 @@
 			return text.toLowerCase().replace(/ /g,'-').replace(/[^\w-]+/g,'');
 				
 		}
-	}
+	};
 
 	var defaultOptions = {
 		prefix: 'custom-form-',
 		keyClass: 'cform',
 		enableWrapper: false
-	}
+	};
 	
 	
 	$.fn.customForm = function(options) {
