@@ -1,0 +1,73 @@
+label {
+	display:inline;
+	margin-bottom:10px;
+}
+
+.normal-form {margin-top:40px;}
+.normal-form label {display:inline; margin:0;}
+
+label.lblr {
+	line-height:23px;
+}
+
+.custom-form-select {
+	background: url("../img/sprite.png") no-repeat scroll -12px -76px transparent;
+	color: #000000;
+	height: 38px;
+	overflow: hidden;
+	padding: 0 24px 0 8px;
+	position: absolute;
+	width: 172px;
+	font: bold 12px/35px Helvetica, Arial, sans-serif;
+}
+
+.custom-form-focused {
+	background-position: -12px -123px;
+}
+
+.custom-form-checkbox {
+	float:left;
+	display:block;
+	width:21px;
+	height:23px;
+	margin-right:10px;
+	background:url('../img/sprite.png') no-repeat scroll -51px -9px transparent;
+}
+
+.custom-form-checkbox.custom-form-focused {
+	background-position:-10px -9px;
+}
+
+.custom-form-checkbox.custom-form-checked {
+	background-position:-51px -39px;
+}
+
+.custom-form-checkbox.custom-form-checked.custom-form-focused {
+	background-position:-10px -39px;
+}
+
+.custom-form-radio {
+	float:left;
+	display:block;
+	width:21px;
+	height:23px;
+	margin-right:10px;
+	background:url('../img/sprite.png') no-repeat scroll -133px -9px transparent;
+}
+
+.custom-form-radio.custom-form-focused {
+	background-position:-92px -9px;
+}
+
+.custom-form-radio.custom-form-checked {
+	background-position:-133px -39px;
+}
+
+.custom-form-radio.custom-form-checked.custom-form-focused {
+	background-position:-92px -39px;
+}
+
+/* fix select height bug on webkit browsers for Mac OS */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	select.cform {-webkit-appearance: menulist-button;}
+}

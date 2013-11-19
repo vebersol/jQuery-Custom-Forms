@@ -1,0 +1,26 @@
+{
+	"name": "CustomForms",
+	"title": "jQuery Custom Forms",
+	"description": "A plugin to generate accessible custom forms: select, radio, checkbox.",
+	"keywords": ["jquery", "custom", "forms", "accessible"],
+	"version": "0.6.3",
+	"author": {
+		"name": "Vinícius Ebersol",
+		"url": "http://en.vebersol.net"
+	},
+	"maintainers": [{
+		"name": "Vinícius Ebersol",
+		"url": "https://github.com/vebersol"
+	}],
+	"licenses": [{
+		"type": "MIT",
+		"url": "http://www.opensource.org/licenses/mit-license.php"
+	}],
+	"bugs": "https://github.com/vebersol/jQuery-Custom-Forms/issues",
+	"homepage": "http://vebersol.net/demos/jquery-custom-forms/",
+	"docs": "https://github.com/vebersol/jQuery-Custom-Forms#readme",
+	"download": "https://github.com/vebersol/jQuery-Custom-Forms/archive/master.zip",
+	"dependencies": {
+		"jquery": ">=1.7"
+	}
+}
