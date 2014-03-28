@@ -179,11 +179,11 @@
 		},
 		
 		toggleRadio: function(element, fakeElement, className) {
-			$('input.' + className).attr('checked', false);
+			$('input.' + className).prop('checked', false);
 			$('span.' + className).removeClass(this.setClass('checked')).removeClass(this.setClass('focused'));				
 			
 			fakeElement.addClass(this.setClass('checked')).addClass(this.setClass('focused'));
-			fakeElement.next('input.' + className).attr('checked', true);
+			fakeElement.next('input.' + className).prop('checked', 'checked');
 		},
 		
 		toggleCheckbox: function(element, fakeElement, className) {
