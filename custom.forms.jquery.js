@@ -60,8 +60,10 @@
 						this.createCustomInput(element);
 						return;
 					}
-					
-					this.createCustomSelect(element);
+
+					if (element.get(0).type === 'select-one') {
+						this.createCustomSelect(element);
+					}
 				}
 			}
 
